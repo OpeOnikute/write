@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Convert{% endblock %}
+
+{% block content %}
+<h2>Here's your story:</h2>
+<form class='form-horizontal' action="" method="POST">
+		<div> 
+			{% csrf_token %}
+			{% if form.non_field_errors %}
+			<div class="form-group text-error">
+			{{ form.non_field_errors }}
+			</div>
+			{% endif %}
+			<br>
+			<textarea rows="10" cols="96" required>{{ story }}</textarea><br><br>			
+			<input type="button" value="Share" class="btn btn-primary btn-md" href='http"//twitter.com' style="width:5%; background-color:#000;">	
+			<input type='submit' value='Save' class="btn btn-primary btn-md" style="width:5%; background-color:#000;">
+		</div>
+	</form>	
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %} | Convert{% endblock %}
+
+{% block scripts %}
+	<link rel='stylesheet' type='text/css' href="{% static 'css/style.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<br><br><br><br>
+<div class="container">
+<br><br><br><br>
+<div class="row text-center">
+<br><br><br><br>
+	<div class="col-xs-1 col-sm-3 col-md-3"></div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="container-fluid" style="">
+				<div style="padding-top: 10px;">
+					<form class='form-horizontal' action="" method="POST">
+						<div> 
+							{% csrf_token %}
+							{% if form.non_field_errors %}
+							<div class="form-group text-error">
+							{{ form.non_field_errors }}
+							</div>
+							{% endif %}
+							<img src="{% static 'img/logo2.svg' %}" alt="Logo"><br>
+      						<hr />							
+      						{% for que,order in combined_list %}
+							{% if 'date' in order %}
+							<p class="lead"><label> {{ que }} : </label> <input type="date" name="{{ order }}" required /></p><br>			
+							{% else %}
+							<p class="lead"> <label> {{ que }} : </label> <input type="text" name="{{ order }}" required /></p><br>			
+							{% endif %}
+							{% endfor %}
+							<br>
+							<div class="row">
+								<input type='submit' class="btn btn-primary btn-md" value='Make Story' style="width:30%;"><br><br>
+								<button type='button' class="btn btn-default" onClick="history.go(-1);return true;" style="width: 10%;float: left; padding-left: 40px; font-size: 12px;text-transform: lowercase;"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
+								</div>
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

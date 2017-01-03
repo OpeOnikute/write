@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+    <title>Write  {% block title %}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300, 400bold" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel='stylesheet' type='text/css' href="{% static 'css/main.css' %}"/>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	{% block scripts %}
+	{% endblock %}
+	</head>
+
+	<body class="custom-bg text-center">
+	<div class="navbar navbar-inverse navbar-fixed-top green" >
+	<br><br><br><br>	
+	<div class="container">
+        <div class="row">
+          <div class="col-xs-4">
+            <a href=""><img src="{% static 'img/logo.svg' %}" alt="Logo" class="img-responsive"></a>
+          </div>
+          <div class="col-xs-8 text-right navbar-nav">
+            <!-- <a href="#" class="scroll">HOW IT WORKS</a>&nbsp; &nbsp;&nbsp; &nbsp; --><a href="#">FAQ</a>&nbsp; &nbsp;&nbsp; &nbsp;<a href="mailto:opeyemionikute@yahoo.com?subject=hi">SAY HI</a>
+          </div>
+    	</div>
+    </div><br>
+    </div><br><br><br><br>
+	{% block content %}{% endblock %}
+	</body>
+	
+</html>

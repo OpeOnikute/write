@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block scripts %}
+	<link rel='stylesheet' type='text/css' href="{% static 'css/style.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<br><br><br><br>
+<div class="container">
+<br><br><br><br>
+<div class="row text-center">
+<br><br><br><br>
+<div class="col-xs-1 col-sm-4 col-md-4"></div>
+<div class="col-xs-12 col-sm-4 col-md-4">
+<div class="container-fluid" style="">
+					<div style="padding-top: 10px;">
+						<form class='form-horizontal' action="" method="POST">
+							<div class='form-group'> 
+          					<img src="{% static 'img/logo2.svg' %}" alt="Logo"><br>
+      						<hr /> 
+						    {% csrf_token %}
+							    {% if form.non_field_errors %}
+						        <div class="form-group text-error">
+						            {{ form.non_field_errors }}
+							        </div>
+							    {% endif %}
+								<p class="lead">What type of story is it?</p>
+								<select class='text-center' name='story_category'>
+									  <option value="event">Events</option>
+									  <option value="news">News</option>
+									  <option value="emails">Emails</option>
+								</select>
+								<br>
+								<br>
+								<br>
+								<div class="row">
+								<input type='submit' class="btn btn-primary btn-md" style=""><br><br>
+								<button type='button' class="btn btn-default" onClick="history.go(-1);return true;" style="width: 10%;float: left; padding-left: 40px; font-size: 12px;text-transform: lowercase;"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
+								</div>
+								
+							</div>
+						</form>	
+					</div>
+			</div>
+		</div>
+</div>
+</div>
+{% endblock %}

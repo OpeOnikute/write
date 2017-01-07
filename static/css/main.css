@@ -19,6 +19,9 @@ p, .lead {
 	font-family: 'Lato Light', sans-serif;
 }
 
+h2, .head{
+  letter-spacing: 2px;
+}
 h1 {
   font-size: 55px;
   line-height: 55px;
@@ -35,13 +38,6 @@ h2 {
   font-weight: 700;
 }
 
-h2, .lead{
-  font-size: 40px;
-  line-height: 40px;
-  letter-spacing: -0.5px;
-  color: #000000;
-  font-weight: 700;
-}
 
 h3 {
   font-size: 16px;
@@ -182,6 +178,13 @@ a:hover, a:focus {
   text-transform: uppercase;
   border-radius: 4px;
   border: none;
+}
+
+.btn-write{
+  background-color: rgba(255,255,255, 0); 
+  width: 10%; 
+  font-size: 12px;
+  text-transform: lowercase;
 }
 
 .btn-lg {
@@ -367,7 +370,8 @@ a:hover, a:focus {
 /* xs < 768 */
 @media screen and (max-width: 767px) {
     .navbar-nav {
-        font-size: 10px;
+        font-size: 12px;
+        margin: 0px 0px;
     }
 }
 
@@ -855,6 +859,10 @@ footer {
   letter-spacing: 0px;
 }
 
+.navbar-inverse .navbar-nav .navbar-nav > li > a, .navbar-nav a {
+    font-size: 9px;
+    margin: none;
+}
 
 .btn-wide {
   width: 100%;
@@ -877,7 +885,11 @@ footer {
 #be-the-first { 
       background-attachment: scroll;
   }
+.navbar-inverse .navbar-nav .navbar-nav > li > a, .navbar-nav a {
+    font-size: 9px;
+    margin: none;
 
+}
 }
 
 

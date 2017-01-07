@@ -19,7 +19,7 @@
 		<div style="padding-top: 10px;">
 			<form class='form-horizontal' action="" method="POST">
 			<div class="form-group"> 
-			<img src="{% static 'img/logo2.svg' %}" alt="Logo"><br>
+			<h2 class="head"><strong>Select Type</strong></h2>
 	      	<hr />
 				{% csrf_token %}
 				{% if form.non_field_errors %}
@@ -37,8 +37,8 @@
 				<br>
 				<br>
 				<div class="row">
-				<input type='submit' class="btn btn-primary btn-md" style=""><br><br>
-				<button type='button' class="btn btn-default" onClick="history.go(-1);return true;" style="width: 10%;float: left; padding-left: 40px; font-size: 12px;text-transform: lowercase;"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
+				<input type='submit' class="btn btn-primary btn-md" style="" value="Next"><br><br>
+				<button type='button' class="btn btn-write" onClick="history.go(-1);return true;" style="float: left; padding-left: 40px;"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
 				</div>
 			</div>
 			</form>	

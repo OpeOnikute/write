@@ -14,6 +14,7 @@ def index(request):
 	for key in request.session.keys():									#clear any previous sessions, without logging the user out
 		del request.session[key]
 	category = ''
+	request.session['data'] = ' '
 	
 	if request.method == 'POST':
 		print 'posted!'
@@ -76,15 +77,17 @@ def result(request):
 	category = str(request.session['data'])
 	inner_category = str(request.session['category'])
 	final_data = request.session['Final Data']	
-	story = ''
+	story = str()
 
 	#do the actual conversion here.
 	if category == 'event':
+		story = str()
 		if inner_category == 'Opportunities':
 			story = converter.e_opportunity(final_data)
 		elif inner_category == 'Past events':
 			story = converter.e_past(final_data)
 	elif category == 'news':
+		story = str()
 		if inner_category == 'Something changing':
 			story = converter.n_change(final_data)
 		elif inner_category == 'Pathetic Occurrence About To Happen ':

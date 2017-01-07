@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Stories, event, news
+from .models import Stories, Email, event, news
 
 # class StoryAdmin(admin.ModelAdmin):
 # 	class Meta:
@@ -15,6 +15,7 @@ class EventAdmin(admin.ModelAdmin):
 admin.site.register(Stories)
 admin.site.register(event)
 admin.site.register(news)
+admin.site.register(Email)
 
 
 

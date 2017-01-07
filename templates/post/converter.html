@@ -25,7 +25,7 @@
 							{{ form.non_field_errors }}
 							</div>
 							{% endif %}
-							<img src="{% static 'img/logo2.svg' %}" alt="Logo"><br>
+							<h2><strong>Make Story</strong></h2>
       						<hr />							
       						{% for que,order in combined_list %}
 							{% if 'date' in order %}
@@ -37,7 +37,7 @@
 							<br>
 							<div class="row">
 								<input type='submit' class="btn btn-primary btn-md" value='Make Story' style="width:30%;"><br><br>
-								<button type='button' class="btn btn-default" onClick="history.go(-1);return true;" style="width: 10%;float: left; padding-left: 40px; font-size: 12px;text-transform: lowercase;"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
+								<button type='button' class="btn btn-write" onClick="history.go(-1);return true;" style="float: left; padding-left: 40px;"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
 								</div>
 						</div>
 					</form>	

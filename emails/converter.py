@@ -15,6 +15,7 @@ def get_mail(mail_type, type_category):
             type_obj = job_acceptance.objects.get(category=type_category)
 
     mail_content = type_obj.content.split('||')   #Get the stories in form a split list
+    print mail_content
     mail = random.choice(mail_content)
     print mail
     return mail   #return the content of the mail

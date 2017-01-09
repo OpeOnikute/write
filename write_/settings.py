@@ -25,7 +25,7 @@ SECRET_KEY = '43%m%%5j#&81o(i7)8j*gsr+v*xu*y34x6v)fm&io@y&#n&4vh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['writeio.herokuapp.com']
 
 
 # Application definition
@@ -57,6 +57,7 @@ MIDDLEWARE_CLASSES = [
 ]
 
 ROOT_URLCONF = 'write_.urls'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 TEMPLATES = [
     {
